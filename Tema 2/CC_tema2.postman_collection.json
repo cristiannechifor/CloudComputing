@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "736c714a-5040-4fa6-b4b8-21064fdc993f",
+		"name": "CC_tema2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "5xx Error",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "COPY",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John\",\r\n    \"age\": 30,\r\n    \"married\": \"yes\"\r\n}"
+				},
+				"url": {
+					"raw": "http://sis-home.go.ro:9090/api/v1/wrong",
+					"protocol": "http",
+					"host": [
+						"sis-home",
+						"go",
+						"ro"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"wrong"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addrecord/1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John\",\r\n    \"age\": 30,\r\n    \"married\": \"yes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://sis-home.go.ro:9090/api/v1/addrecord/1",
+					"protocol": "http",
+					"host": [
+						"sis-home",
+						"go",
+						"ro"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"addrecord",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addrecord/1 Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John\",\r\n    \"age\": 70,\r\n    \"married\": \"no\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://sis-home.go.ro:9090/api/v1/update/1",
+					"protocol": "http",
+					"host": [
+						"sis-home",
+						"go",
+						"ro"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addrecord/99 BadReq",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John\",\r\n    \"age\": 30,\r\n    \"married\": \"yes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://sis-home.go.ro:9090/api/v1/addrecord/99",
+					"protocol": "http",
+					"host": [
+						"sis-home",
+						"go",
+						"ro"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"addrecord",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wrongpath POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://sis-home.go.ro:9090/api/v1/wrong",
+					"protocol": "http",
+					"host": [
+						"sis-home",
+						"go",
+						"ro"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"wrong"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getrecord/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sis-home.go.ro:9090/api/v1/getrecord/1",
+					"protocol": "http",
+					"host": [
+						"sis-home",
+						"go",
+						"ro"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"getrecord",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wrongpath GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sis-home.go.ro:9090/api/v1/wrong",
+					"protocol": "http",
+					"host": [
+						"sis-home",
+						"go",
+						"ro"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"wrong"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://sis-home.go.ro:9090/api/v1/delete/1",
+					"protocol": "http",
+					"host": [
+						"sis-home",
+						"go",
+						"ro"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
